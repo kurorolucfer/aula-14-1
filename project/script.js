@@ -2,6 +2,13 @@
 const API_URL = "http://localhost:3000";
 
 // Função para buscar todos os usuários
+async function fetchUsers(){
+  const response = await fetch(API_URL)
+  const users = await response.json()
+  //const users = await JSON.parse(response)
+
+  displayUsers(users)
+}
 
 // Função para exibir todos os usuários
 function displayUsers(users) {
